@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Alarm Clock</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+   
+</head>
+<body>
+
+    <main>
+   
+        <div id="clockBody">
+
+            <div id="clock">
+                <span class="display" id="hours">00</span>
+                <span class="display">:</span>
+                <span class="display" id="min">00</span>
+                <span class="display">:</span>
+                <span class="display" id="seconds">00</span>
+            </div>
+
+            <!-- button to add alarm -->
+            <div id="addAlarm">
+
+                <input type="number" placeholder="hours" class="time" max="23" min="0">
+                <input type="number" placeholder="minutes" class="time" max="59" min="0">
+                <input type="number" placeholder="seconds" class="time" max="59" min="0">
+                <button type="submit" id="newAlarm">Set Alarm</button>
+                
+                
+                
+            </div>
+
+            <button id="stopAlarm">Stop Alarm</button>
+
+        </div>
+
+        <!-- List of alarms -->
+
+        <div id="alarms">
+            <ul style="list-style-type: none;" id="ull">
+                
+            </ul>
+        </div>
+
+    </main>
+
+    
+    
+
+
+
+
+    <script src="https://kit.fontawesome.com/61ac156b46.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="script.js"></script> 
+</body>
+</html>

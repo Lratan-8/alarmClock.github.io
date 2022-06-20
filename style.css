@@ -1,0 +1,147 @@
+
+html{
+    background-color: black;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#clockBody{
+    height: 250px;
+    width: 450px;
+    border-radius: 10px;
+    border: 5px solid black;
+    box-sizing: border-box;
+    /* margin-left: 40%; */
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px;
+    background-color: rgb(19, 19, 19);
+}
+
+#clock{
+    height: 40%;
+    width: 79%;
+    border: 2px solid rgb(24, 24, 24);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+    text-shadow: 0px 0px 20px greenyellow;
+
+}
+
+
+
+
+
+.display{
+    /* border: 1px solid black; */
+    font-size: 4.5rem;
+    font-family: Roboto;
+}
+
+
+
+
+
+
+/* style for add alarm */
+
+
+#addAlarm{
+    display: flex;
+    width: 83%;
+    justify-content: space-evenly;
+}
+
+#addAlarm input{
+    width: 80px;
+    height: 35px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    text-align: center;
+    color: antiquewhite;
+}
+
+#newAlarm{
+    width: 70px;
+    height: 35px;
+    border-radius: 5px;
+}
+
+
+/* from here we will start adding alarm */
+
+#alarms{
+    width: 400px;
+    padding: auto;
+    text-align: center;
+    /* border: 3px solid black; */
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+#alarms ul{
+    padding: 0;
+    
+    
+}
+
+#alarms ul li{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+    border: 2px solid black;
+    align-items:center;
+    background-color: rgb(41, 41, 41);
+    border-radius: 10px;    
+    box-shadow: 1px 1px 5px 1px black, -1px -1px 5px 0.2px rgb(209, 208, 208) ;
+    margin-top: 10px;
+    color: rgb(206, 206, 206);
+    
+
+}
+.delete{
+    height: 20px;
+}
+
+
+#changeHours, #changeMins, #changeSec{
+    color: red;
+    font-weight: bolder;
+}
+
+
+#stopAlarm{
+    height: 40px;
+    width: 100px;
+    border-radius: 5px;
+    /* border: 1.5px solid black; */
+    font-size: 12px;
+    background-color: rgb(34, 33, 33);
+    box-shadow: 4px 4px 5px 1px black, -2px -2px 5px 0.2px rgb(209, 208, 208);
+    color: white;
+    text-shadow: 0px 0px 10px greenyellow;
+}
+
+input{
+    background-color: grey;
+
+}
+
+
+::placeholder{
+    color: white;
+}
+
+
