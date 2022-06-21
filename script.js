@@ -5,35 +5,26 @@
 var seconds = document.getElementById('seconds');
 var min = document.getElementById('min');
 var hour = document.getElementById('hours');
-var hh = 0;
-var sec =0;
-var minn = 0;
+
 
 
 var audio = new Audio("assets/ringtone.mp3")
 
 var timer = function(){
 
-    sec++;
-    
-    if(sec== 60){
-    
-        minn++;
-        sec=0;
-        min.innerText = minn;
-     
-    }
 
+
+
+    let now = new Date();
+
+    let hh = now.getHours();
+    let minn = now.getMinutes();
+    let sec = now.getSeconds();
+
+    
     seconds.innerText = sec;
-
-    if(minn == 60){
-
-        hh++;
-        minn = 0;
-        min.innerText = minn;
-        hour.innerText = hh;
-        
-    }
+    min.innerText = minn;
+    hours.innerText = hh;
 
 
 
@@ -45,6 +36,7 @@ var timer = function(){
             
             audio.play();
             window.alert("Hey it is: "+hh + " " + minn + " " + sec  );
+            alarmAnimation();
         };
 
     }else if(hh==0 && minn>0){
@@ -53,12 +45,14 @@ var timer = function(){
             
             audio.play();
             window.alert("Hey it is: "+hh + " " + minn + " " + sec  );
+            alarmAnimation();
         };
     }else{
         if(alarmArray.includes((hh*60*60)+(minn*60)+sec)){
            
             audio.play();
             window.alert("Hey it is: "+hh + " " + minn + " " + sec  );
+            alarmAnimation();
         }
     }
 
@@ -75,7 +69,22 @@ var intervalID = setInterval(timer, 1000);
 
 
 
+
+
+
+
+
+
+
+
+
+
 //to pause the alarm
+
+
+
+let css = window.document.styleSheets[0];
+
 
 var stopA = document.getElementById('stopAlarm');
 
@@ -85,6 +94,14 @@ function alarmStop(){
 }
 
 stopA.addEventListener('click',alarmStop);
+
+
+//function for alarm animation 
+
+
+function alarmAnimation(){
+    stopA.style.animation = "myAnimation infinite";
+}
 
 
 
