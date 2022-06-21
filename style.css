@@ -1,17 +1,16 @@
-
-html{
+html {
     background-color: black;
 }
 
-main{
+main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+
 }
 
-#clockBody{
+#clockBody {
     height: 250px;
     width: 450px;
     border-radius: 10px;
@@ -27,7 +26,7 @@ main{
     background-color: rgb(19, 19, 19);
 }
 
-#clock{
+#clock {
     height: 40%;
     width: 79%;
     border: 2px solid rgb(24, 24, 24);
@@ -44,7 +43,7 @@ main{
 
 
 
-.display{
+.display {
     /* border: 1px solid black; */
     font-size: 4.5rem;
     font-family: Roboto;
@@ -58,13 +57,13 @@ main{
 /* style for add alarm */
 
 
-#addAlarm{
+#addAlarm {
     display: flex;
     width: 83%;
     justify-content: space-evenly;
 }
 
-#addAlarm input{
+#addAlarm input {
     width: 80px;
     height: 35px;
     border-radius: 5px;
@@ -73,16 +72,20 @@ main{
     color: antiquewhite;
 }
 
-#newAlarm{
-    width: 70px;
+#newAlarm {
+    
     height: 35px;
     border-radius: 5px;
+}
+
+#newAlarm:hover{
+    animation: glowing 1300ms infinite;
 }
 
 
 /* from here we will start adding alarm */
 
-#alarms{
+#alarms {
     width: 400px;
     padding: auto;
     text-align: center;
@@ -91,38 +94,41 @@ main{
     box-sizing: border-box;
 }
 
-#alarms ul{
+#alarms ul {
     padding: 0;
-    
-    
+
+
 }
 
-#alarms ul li{
+#alarms ul li {
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
     justify-content: space-evenly;
     border: 2px solid black;
-    align-items:center;
+    align-items: center;
     background-color: rgb(41, 41, 41);
-    border-radius: 10px;    
-    box-shadow: 1px 1px 5px 1px black, -1px -1px 5px 0.2px rgb(209, 208, 208) ;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px 1px black, -1px -1px 5px 0.2px rgb(209, 208, 208);
     margin-top: 10px;
     color: rgb(206, 206, 206);
-    
+
 
 }
-.delete{
+
+.delete {
     height: 20px;
 }
 
 
-#changeHours, #changeMins, #changeSec{
+#changeHours,
+#changeMins,
+#changeSec {
     color: red;
     font-weight: bolder;
 }
 
 
-#stopAlarm{
+#stopAlarm {
     height: 40px;
     width: 100px;
     border-radius: 5px;
@@ -134,14 +140,32 @@ main{
     text-shadow: 0px 0px 10px greenyellow;
 }
 
-input{
+#stopAlarm:hover {
+    animation: glowing 1300ms infinite;
+}
+
+@keyframes glowing {
+    0% {
+        background-color: #2ba805;
+        box-shadow: 0 0 5px #2ba805;
+    }
+
+    50% {
+        background-color: #49e819;
+        box-shadow: 0 0 20px #49e819;
+    }
+
+    100% {
+        background-color: 0 0 5px #2ba805;
+    }
+}
+
+input {
     background-color: grey;
 
 }
 
 
-::placeholder{
+::placeholder {
     color: white;
 }
-
-
